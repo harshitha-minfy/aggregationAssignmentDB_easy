@@ -88,7 +88,11 @@ db.products.aggregate([{$match: { category: "Electronics" }}]);
 }  
 ######  
 2  
-![image](https://github.com/user-attachments/assets/b556336f-7167-4de8-aade-c97a89237b05)
+db.products.aggregate([
+{ $group: { _id: "$category",count: { $sum: 1 }}}
+]);  
+![image](https://github.com/user-attachments/assets/9e452348-1453-499d-896e-edca6ec5c960)
+
 
 
 ####
