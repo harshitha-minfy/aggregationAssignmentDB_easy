@@ -1,5 +1,6 @@
 # aggregationAssignmentDB_easy  
-<pre/>
+<pre/>  
+**1.Product Names and Prices, Sorted by Price (Descending):**
 db.products.aggregate([{$match: { category: "Electronics" }}]);
 {
   _id: ObjectId('683839d77b6679208e9af1af'),
@@ -87,7 +88,7 @@ db.products.aggregate([{$match: { category: "Electronics" }}]);
   }
 }  
 ######  
-2  
+**2   Count Products per Category:**
 db.products.aggregate([
 { $group: { _id: "$category",count: { $sum: 1 }}}
 ]);  
@@ -114,7 +115,7 @@ db.products.aggregate([
 
 
 ####
-3  
+**3   List All Products in the "Electronics" Category:**
 db.products.aggregate([
   {$project: {_id: 0,name: 1,price: 1}},
   {$sort: {price: -1 } } ])
