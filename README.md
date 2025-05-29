@@ -91,8 +91,26 @@ db.products.aggregate([{$match: { category: "Electronics" }}]);
 db.products.aggregate([
 { $group: { _id: "$category",count: { $sum: 1 }}}
 ]);  
-![image](https://github.com/user-attachments/assets/9e452348-1453-499d-896e-edca6ec5c960)
-
+{
+  _id: 'Home Goods',
+  count: 1
+}
+{
+  _id: 'Apparel',
+  count: 2
+}
+{
+  _id: 'Electronics',
+  count: 5
+}
+{
+  _id: 'Accessories',
+  count: 1
+}
+{
+  _id: 'Sports',
+  count: 1
+}
 
 
 ####
